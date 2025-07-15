@@ -6,17 +6,13 @@ files:
     overwrite: yes
 permissions:
   - object: /var/www/html/vite-aws
-    pattern: "**"
     owner: www-data
     group: www-data
+  - object: /var/www/html/vite-aws/scripts
+    pattern: "*.sh"
     mode: 755
-  - object: /var/www/html/vite-aws
-    pattern: "**"
-    type:
-      - file
     owner: www-data
     group: www-data
-    mode: 644
 hooks:
   BeforeInstall:
     - location: scripts/stop_application.sh
