@@ -8,11 +8,7 @@ permissions:
   - object: /var/www/html/vite-aws
     owner: www-data
     group: www-data
-  - object: /var/www/html/vite-aws/scripts
-    pattern: "*.sh"
     mode: 755
-    owner: www-data
-    group: www-data
 hooks:
   BeforeInstall:
     - location: scripts/stop_application.sh
