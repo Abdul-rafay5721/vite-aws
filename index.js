@@ -14,7 +14,7 @@ app.get('/api/test', (req, res) => {
 // Root route
 app.get('/', (req, res) => {
     res.set('Content-Type', 'text/plain');
-    res.send('Server is running! Visit /api/test for the test endpoint.');
+    res.send('Server is running! Visit /api/test for the test endpoint. And also to test pipeline');
 });
 
 // Start the server
